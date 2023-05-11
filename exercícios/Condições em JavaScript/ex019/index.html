@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiplas Ações</title>
+    <link rel="stylesheet" href="indexEstilo.css">
+</head>
+<body>
+    <h1>Múltiplas Ações</h1>
+    <div id="btn" onclick="Ações()">Clique para iniciar</div>
+    <div id="res"><p>Clique no botão acima para começar.</p></div>
+    <script>
+        function Ações(){
+        let Pnum = Number(prompt("Primeiro valor:"))
+        let Snum = Number(prompt("Segundo valor:"))
+        let acoes = Number(prompt(`Valores informados: ${Pnum} e ${Snum}.\nO que vamos fazer?\n[1] Somar\n[2] Subtrair\n[3] Multiplicar\n[4] Dividir`))
+        let acao = ""
+        if(acoes == 1){
+            acao = `${Pnum} + ${Snum} = <strong>${Pnum+Snum}</strong>`
+        }else if(acoes == 2){
+            acao = `${Pnum} - ${Snum} = <strong>${Pnum-Snum}</strong>`
+        }else if(acoes == 3){
+            acao = `${Pnum} * ${Snum} = <strong>${Pnum*Snum}</strong>`
+        }else if(acoes == 4){
+            acao = `${Pnum} / ${Snum} = <strong>${Pnum/Snum}</strong>`
+        }else{
+            acao = `OPÇÃO INVÁLIDA! Você digitou ${Pnum} e ${Snum}, mas não sei o que fazer com eles.`
+        }
+        let res = document.getElementById("res")
+        res.innerHTML = `
+        <h1>Calculando...</h1>
+        <p>${acao}</p>
+        `
+    }
+    </script>
+</body>
+</html>

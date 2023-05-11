@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#btn{
+    height: 80px;
+    width: 180px;
+    border: 1px solid rgba(0, 0, 0, 0.589);
+    line-height: 80px;
+    text-align: center;
+    background-color: rgba(220, 220, 220, 0.719);
+    display: inline-block;
+}
+
+div#btn:hover{
+    background-color: rgba(0, 255, 255, 0.432);
+    border-color: rgba(0, 0, 255, 0.425);
+}
+
+div#btn:active{
+    background-color: rgba(43, 100, 224, 0.534);
+    border-color: rgba(43, 43, 224, 0.788);
+}
+
+span#yellow{
+    background-color: yellow;
+}

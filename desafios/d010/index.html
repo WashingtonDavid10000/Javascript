@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula de Bhaskara</title>
+    <link rel="stylesheet" href="indexEstilo.css">
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <div id="cal" onclick="Calcular()">Calcular</div>
+    <div id="res"><p>Considerando uma equação no formato <strong>ax<sup>2</sup> + bx + c</strong> = 0, aperte o botão acima para calcular o valor de △.</p></div>
+    <script>
+        function Calcular(){
+        let a = prompt("Qual o valor de a?")
+        let b = prompt("Qual o valor de b?")
+        let c = prompt("Qual o valor de c?")
+        let fim = (b * b) + ((-4) * a * c)
+        let res = document.getElementById('res')
+        res.innerHTML = `<h2>Resolvendo Bhaskara</h2>
+        <p>A equação atual é ${a}x<sup>2</sup> + ${b}x + ${c} = 0</p>
+        <p>O cálculo realizado será <strong>△ = ${b}<sup>2</sup> - 4 . ${a} . ${c}</strong></p>
+        O valor calculado foi <strong id="ez">△ = ${fim}</strong>`
+        }
+    </script>
+</body>
+</html>

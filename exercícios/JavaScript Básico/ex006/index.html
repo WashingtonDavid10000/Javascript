@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <link rel="stylesheet" href="indexEstilo.css">
+</head>
+<body>
+    <h1>Somando dois números</h1>
+    <div id="btn" onclick="soma()">Iniciar a soma</div>
+    <div id="res"><p>O resultado vem aqui...</p></div>
+    <script>
+        function soma(){
+            let Pnum = Number(prompt("Digite um número:"))
+            let Snum = Number(prompt("Digite outro número:"))
+            let res = document.getElementById("res")
+            res.innerHTML = `<p>A soma entre <span>${Pnum}</span> e <span>${Snum}</span> é igual a <strong>${Pnum+Snum}</strong>!</p>`
+        }
+    </script>
+</body>
+</html>

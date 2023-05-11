@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Inteligente</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contagem "inteligente"</h1>
+    <p>Use qualquer valor nas caixas, simule contagens crescentes e regressivas. Use também valores negativos.</p>
+        <p>Valor Inicial:
+            <input type="number" name="txtInicio" id="txtInicio" placeholder="ínicio da contagem">
+        
+        </p>
+        <p>Valor Final:
+            <input type="number" name="txtFinal" id="txtFinal" placeholder="final da contagem">
+        </p>
+        <input type="submit" value="Contar" onclick="contar()">
+    <p>Preencha os dados acima e aperte o botão.</p>
+    <div id="res"></div>
+
+    <script>
+        function contar(){
+            let valorIni = document.getElementById("txtInicio").value
+            let valorFim = document.getElementById("txtFinal").value
+            let res = document.getElementById("res")
+            res.innerHTML = `<h2>Contando de ${valorIni} até ${valorFim}</h2>`
+
+            if(valorIni>valorFim){
+                for(valorIni;valorIni >= valorFim; valorIni--){
+                res.innerHTML += `${valorIni} &#x1F449 `
+                }
+            }else if(valorIni<valorFim){
+                for(valorIni;valorIni <= valorFim; valorIni++){
+                res.innerHTML += `${valorIni} &#x1F449 `
+                }
+            }
+            
+            
+            
+
+            
+            
+            
+        }
+    </script>
+</body>
+</html>

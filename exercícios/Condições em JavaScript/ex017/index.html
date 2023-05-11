@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Números</title>
+    <link rel="stylesheet" href="indexEstilo.css">
+</head>
+<body>
+    <h1>Gerador de Número</h1>
+    <div id="btn" onclick="Gerar()">Clique em min</div>
+    <div id="btn2" onclick="Limpar()">Limpar</div>
+    <div id="res"><p>Cada vez que vocês apertar o botão acima, eu penso em um número entre 1 e 100.</p></div>
+    <script>
+
+        let res = document.getElementById("res")
+
+        function Gerar(){
+        let randomNum = Math.floor((Math.random() * 100) + 1);
+        res.innerHTML += `
+        <p>Acabei de pensar no número <span id="yellow">${randomNum}</span>!</p>
+        `}
+
+        function Limpar(){
+            res.innerHTML = ""
+        }
+    </script>
+
+</body>
+</html>

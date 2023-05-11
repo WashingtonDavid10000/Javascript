@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisando Data e Hora</title>
+    <link rel="stylesheet" href="indexEstilo.css">
+</head>
+<body>
+    <h1>Analisando Data e Hora do Sistema</h1>
+    <div id="btn" onclick="D_H()">Iniciar Análise</div>
+    <div id="res"><p>Aqui vai aparecer algo...</p></div>
+    <script>
+        function D_H(){
+            let data = new Date()
+            let dia = data.getDate()
+            let meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            let mes = meses[data.getMonth()]
+            let ano = data.getFullYear()
+            let diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado']
+            let diaS = diasDaSemana[data.getDay()]
+            let hora = data.getHours()
+            let minutos = data.getMinutes()
+            let segundos = data.getSeconds()
+            let res = document.getElementById("res")
+            res.innerHTML = `
+            <p>Dia: <span id="yellow">${dia}</span></p>
+            <p>Mês: <span id="yellow">${mes}</span></p>
+            <p>Ano: <span id="yellow">${ano}</span></p>
+            <p>Dia da semana: <span id="yellow">${diaS}</span></p>
+            <p>Hora: <span id="yellow">${hora}</span></p>
+            <p>Minutos: <span id="yellow">${minutos}</span></p>
+            <p>Segundos: <span id="yellow">${segundos}</span></p>
+            `
+        }
+    </script>
+</body>
+</html>

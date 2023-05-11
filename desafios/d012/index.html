@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço Mudou</title>
+    <link rel="stylesheet" href="indexEstilo.css">
+</head>
+<body>
+    <h1>Preço Mudou</h1>
+    <div id="btn" onclick="preço()">Verificar</div>
+    <div id="res"><p>Clique no botão acima para analisar a mudança de preço.</p></div>
+    <script>
+        function preço(){
+        let antes = Number(prompt("Qual era o preço anterior do produto?"))
+        let atual = Number(prompt("Qual é o preço atual do produto?"))
+        let bc = ""
+        let subcai = ""
+        let porc = ((antes - atual) / antes) * 100
+        if(antes > atual){
+            let bc = "barato"
+            let subcai = `caiu ${antes-atual}`
+        }else{
+            let bc = "caro"
+            let subcai = `subiu ${antes-atual}`
+        }
+        let res = document.getElementById("res")
+        res.innerHTML = `
+        <h1>Analisando os valores informados</h1>
+        <p>O produto custava R$${antes} e agora custa R$${atual}.</p>
+        <p>Hoje o produto está mais ${bc}.</p>
+        <p>O preço ${subcai} em relação ao preço anterior.</p>
+        <p>Uma variação de ${porc.toFixed(2)}%</p>
+        `
+    }
+    </script>
+</body>
+</html>

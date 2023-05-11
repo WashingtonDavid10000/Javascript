@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Desconto</title>
+    <link rel="stylesheet" href="indexEstilo.css">
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <div id="cal" onclick="cal()">Desconto de 10%</div>
+    <div id="res"><p>Clique no botão acima para iniciar.</p></div>
+    <script>
+        function cal(){
+            var prod = prompt("Qual é o produto que você está comprando?")
+            var prec = prompt(`Qual é o preço de ${prod}?`)
+            var desc = ((prec * 10) / 100)
+            var res = document.getElementById("res")
+            res.innerHTML = `<h1>Calculando desconto de 10% para ${prod}</h1>
+            <p>O preço original era R$${prec}.<br>
+            Você acaba de ganhar R$${desc} de desconto (-10%).<br>
+            No fim, você terá que pagar R$${prec - desc} no produto <strong>${prod}</strong>.</p>`
+        }
+    </script>
+</body>
+</html>

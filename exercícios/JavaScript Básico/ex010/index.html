@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Externo</title>
+    <link rel="stylesheet" href="indexEstilo.css">
+</head>
+<body>
+    <h1>JavaScript Externo</h1>
+    <div class="btn" id="btn1">Ação 1</div>
+    <div class="btn" id="btn2">Ação 2</div>
+    <div class="btn" id="btn3">Ação 3</div>
+    <div class="btn" id="btn4">Ação 4</div>
+    <div><p>Aqui vou registrar suas ações com os botões acima.</p></div>
+    <div id="res"></div>
+    <script>
+            let btn1 = document.getElementById("btn1")
+            let btn2 = document.getElementById("btn2")
+            let btn3 = document.getElementById("btn3")
+            let btn4 = document.getElementById("btn4")
+            let res = document.getElementById("res")
+            btn1.addEventListener("click", botoes)
+            btn2.addEventListener("click", botoes)
+            btn3.addEventListener("click", botoes)
+            btn4.addEventListener("click", botoes)
+        function botoes(){
+            if(this.id==="btn1"){
+                res.innerHTML += "<p>Clicou no primeiro botão</p>"
+            }
+            if(this.id==="btn2"){
+                res.innerHTML += "<p>Clicou no segundo botão</p>"
+            }
+            if(this.id==="btn3"){
+                res.innerHTML += "<p>Clicou no terceiro botão</p>"
+            }
+            if(this.id==="btn4"){
+                res.innerHTML += "<p>Clicou no quarto botão</p>"
+            }
+            
+        }
+    </script>
+</body>
+</html>
